@@ -1,4 +1,5 @@
 ##Firefox
+Includes ublock origin, and Adwaita gtk theme
 ```
 cd firefox
 docker build -t jsparber/firefox .
