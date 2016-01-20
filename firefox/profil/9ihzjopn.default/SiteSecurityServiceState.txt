@@ -1,0 +1,4 @@
+services.addons.mozilla.org:HSTS	0	16820	1484835034183,1,0
+duckduckgo.com:HSTS	0	16820	1484835132146,1,0
+addons.mozilla.org:HSTS	0	16820	1484835010426,1,0
+addons.cdn.mozilla.net:HSTS	0	16820	1484835032998,1,0

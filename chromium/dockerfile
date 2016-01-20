@@ -1,0 +1,9 @@
+FROM ubuntu 
+RUN apt-get update && apt-get install -y chromium-browser
+RUN apt-get clean
+
+RUN adduser chromium
+USER chromium
+ENV HOME /home/chromium 
+CMD []
+ENTRYPOINT ["/usr/bin/chromium-browser", "--no-sandbox"]

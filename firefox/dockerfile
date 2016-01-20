@@ -1,0 +1,17 @@
+FROM ubuntu 
+RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get install -y firefox
+RUN apt-get install -y libcanberra-gtk-module libcanberra-gtk3-module 
+RUN apt-get install -y gtk2-engines-pixbuf
+RUN apt-get clean
+COPY theme /usr/share/themes/Adwaita
+COPY config/vendor.js /usr/lib/firefox/browser/defaults/preferences/vendor.js
+RUN adduser firefox
+ENV HOME /home/firefox 
+COPY profil /home/firefox/.mozilla/firefox
+COPY config/gtk.conf /home/firefox/.config/gtk-3.0/settings.ini
+RUN chown firefox:users -R /home/firefox/
+USER firefox
+CMD []
+ENTRYPOINT ["/usr/bin/firefox"]
