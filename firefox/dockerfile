@@ -9,4 +9,4 @@ COPY config/gtk.conf /home/firefox/.config/gtk-3.0/settings.ini
 RUN chown firefox:users -R /home/firefox/
 USER firefox
 
-ENTRYPOINT ["/usr/bin/firefox", "-no-remote"]
+CMD ["/usr/bin/firefox", "-no-remote"]
